@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        LoadingDialog.getInstance(this).dismiss();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data);
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     public void next(View view) {
         Intent i = new Intent(this, detail.class);
         startActivity(i);
+        //点击按钮时会触发加载动画
+        LoadingDialog.getInstance(this).show();
     }
-
+                                                                                                                                            
 }
