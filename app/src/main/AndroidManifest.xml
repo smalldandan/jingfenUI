@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".detail"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".detail"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MiainuiActivity" />
+        <activity android:name=".mainui"></activity>
     </application>
 
 </manifest>

@@ -13,9 +13,11 @@ public class detail extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         ActionBar ab = getSupportActionBar();
-
         //使能app bar的导航功能
         ab.setDisplayHomeAsUpEnabled(true);
+        //顶部返回按钮
+
+
 
     }
 }

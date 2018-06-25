@@ -9,22 +9,25 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String[] data = { "Apple", "Banana", "Orange", "Watermelon",
-            "Pear", "Grape", "Pineapple", "Strawberry", "Cherry", "Mango" };
+
+    private String[] data = {"Apple", "Banana", "Orange", "Watermelon",
+            "Pear", "Grape", "Pineapple", "Strawberry", "Cherry", "Mango"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                MainActivity.this, android.R.layout.simple_list_item_1, data);
-   ListView listView = (ListView) findViewById(R.id.list_view);
-   listView.setAdapter(adapter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data);
+        ListView listView = (ListView) findViewById(R.id.list_view);
+        listView.setAdapter(adapter);
+
+//        调用加载页面
+        //LoadingDialog.getInstance(this).show();
     }
 
 
     //跳转到某一条记录的详情页
-    public void next(View view)
-    {
+    public void next(View view) {
         Intent i = new Intent(this, detail.class);
         startActivity(i);
     }
