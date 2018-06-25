@@ -18,6 +18,5 @@ public class detail extends AppCompatActivity {
         //顶部返回按钮
 
 
-
     }
 }

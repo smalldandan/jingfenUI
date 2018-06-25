@@ -21,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
 
-//        调用加载页面
+//        调用加载中页面
         //LoadingDialog.getInstance(this).show();
+        //LoadingDialog.getInstance(this).dismiss();
+
     }
 
 
